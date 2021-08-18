@@ -2,18 +2,18 @@ version: "3.9"
    
 services:
    db:
-    image: mysql:8
-    ports:
-      - "3306:3306"
-    volumes:
-      - ./data/db:/var/lib/postgresql/data
+    image: mysql:8.0.26
+    restart: always
     environment:
-      - MYSQL_DATABASE='mydatabase'
-      - MYSQL_USER='root'
-      - MYSQL_PASSWORD='some_password'
-      - MYSQL_ROOT_PASSWORD='some_password'
-      - MYSQL_HOST=''
-  web:
+      - MYSQL_DATABASE=mysitedb
+      - MYSQL_USER=chitrang
+      - MYSQL_PASSWORD=Test@123
+      - MYSQL_ROOT_PASSWORD=Canada@2017
+    ports:
+      - "3307:3306"      
+    volumes:
+      - ./dbdata:/var/lib/mysql  
+   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
@@ -21,4 +21,4 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - db   
+      - db

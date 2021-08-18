@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-57((ih##4syph_8@%br%ex1zo90haf$m2z&w*%d0d#kz9ig_po
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-3-80-187-163.compute-1.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-3-80-187-163.compute-1.amazonaws.com','localhost','0.0.0.0']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'products'
 ]
 
 MIDDLEWARE = [
@@ -73,18 +74,18 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '',
-        'PORT': 3306,
-        'NAME': 'mysitedb',
-        'USER': 'chitrang',
-        'PASSWORD': 'Test@123',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         # 'ENGINE': 'django.db.backends.sqlite3',
+#         # 'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.mysql',
+#         'HOST': 'db',
+#         'PORT': 3306,
+#         'NAME': 'mysitedb',
+#         'USER': 'chitrang',
+#         'PASSWORD': 'Test@123',
+#     }
+# }
 
 
 # Password validation

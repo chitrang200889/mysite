@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+psycopg2-binary = ">=2.8"
+django-mysql = "==2.2.0"
+Django = "<4.0,>=3.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
